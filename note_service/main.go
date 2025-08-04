@@ -18,6 +18,6 @@ func main() {
 	app.Post("/notes/add",handlers.AddNote)
 	app.Post("/notes/uptade/:id",handlers.UpdateNotes)
 	app.Delete("/notes/delete/:id",handlers.DeleteNote)
-    // Fiber'in kendi server'ını kullan
+
     log.Fatal(app.Listen(":8081"))
 }
