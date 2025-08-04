@@ -15,6 +15,5 @@ func main() {
     
 	app.Post("/register",handlers.RegisterUser)
 	app.Post("/login",handlers.Login)
-    // Fiber'in kendi server'ını kullan
-    log.Fatal(app.Listen(":8080"))
+    	log.Fatal(app.Listen(":8080"))
 }
