@@ -53,13 +53,11 @@ func AddNote(c *fiber.Ctx) error {
         return c.Redirect("/login")
     }
 
-    // JWT claims'lerini al
     claims, ok := token.Claims.(jwt.MapClaims)
     if !ok || !token.Valid {
         return c.Redirect("/login")
     }
 
-    // userId claim'inden kullanıcıyı al
     userID := int(claims["userId"].(float64))
 
 	req := new(data.NoteData)
